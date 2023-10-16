@@ -16,13 +16,13 @@ public class StudentController {
         this.service = service;
     }
 
-    @CrossOrigin
     @GetMapping("avialableGroups")
     public List<String> getAvialableGroups(@RequestParam String bundle){
         System.out.println(bundle);
         return service.getAvailableGroupsByBundle(bundle);
     }
-    @CrossOrigin
+
+    
     @PostMapping("student")
     public ResponseEntity<String> saveStudent(@RequestBody Student student){
         System.out.println(student);
