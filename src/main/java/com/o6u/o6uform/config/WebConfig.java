@@ -15,7 +15,7 @@ public class WebConfig
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 System.out.println("CORS=============");
-                registry.addMapping("/**").allowedOrigins("").allowedHeaders("*");
+                registry.addMapping("/**").allowedOrigins("*").allowedHeaders("*");
             }
         };
     }
